@@ -6,6 +6,6 @@ NodeJS is required to run this project. It was tested with the latest LTS versio
 
 The following commands need to be executed:
 
-npm i -g gulp
-npm i
+npm i -g gulp<br>
+npm i<br>
 gulp server
