@@ -1,15 +1,15 @@
 <div class="container home">
   <div class="row">
-    <div class="col-10 offset-1">
+    <div ng-if="vm.blogPosts.length > 0" class="col-10 offset-1">
       <blog-post-item
         class="text-center"
         highlight="true"
         blog-post="vm.firstPost"
       ></blog-post-item>
     </div>
-    <hr />
-    <h3>Some recommended posts</h3>
-    <hr />
+    <hr ng-if="vm.blogPosts.length > 1" />
+    <h3 ng-if="vm.blogPosts.length > 1">Some recommended posts</h3>
+    <hr ng-if="vm.blogPosts.length > 1" />
     <div class="col-12 col-md-6 col-lg-3" ng-repeat="post in vm.blogPosts">
       <blog-post-item blog-post="post" show-abstract="true"></blog-post-item>
     </div>
