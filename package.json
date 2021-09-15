@@ -1,0 +1,29 @@
+{
+  "name": "salesforce-challenge",
+  "version": "1.0.0",
+  "description": "SalesForce Malana 3 FrontEnd Dev Challenge",
+  "main": "app.js",
+  "keywords": [
+    "salesforce",
+    "frontend",
+    "developer",
+    "angular"
+  ],
+  "author": "Facundo Abdo",
+  "license": "MIT",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.29",
+    "angular": "^1.8.2",
+    "bootstrap": "^5.1.1",
+    "bootstrap-icons": "^1.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-sass": "^5.0.0",
+    "gulp-webserver": "^0.9.1",
+    "node-sass": "^6.0.1",
+    "sass": "^1.41.0"
+  }
+}

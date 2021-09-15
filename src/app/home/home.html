@@ -1,0 +1,25 @@
+<div class="container home">
+  <div class="row">
+    <div class="col-10 offset-1">
+      <blog-post-item
+        class="text-center"
+        highlight="true"
+        blog-post="vm.firstPost"
+      ></blog-post-item>
+    </div>
+    <hr />
+    <h3>Some recommended posts</h3>
+    <hr />
+    <div class="col-12 col-md-6 col-lg-3" ng-repeat="post in vm.blogPosts">
+      <blog-post-item blog-post="post" show-abstract="true"></blog-post-item>
+    </div>
+    <div class="col text-center" ng-if="vm.blogPosts.length === 0">
+      <h2 class="mt-5">
+        Hi, currently there aren't any blog posts available for reading.
+        <br />Probably the admin deleted all of them by accident ^^.<br />Please
+        give us a visit in a few minutes and everything will be back to normal
+        uWu.
+      </h2>
+    </div>
+  </div>
+</div>

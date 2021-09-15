@@ -1,0 +1,19 @@
+<article
+  class="blog-post"
+  ng-class="{ 'blog-post--abstract':vm.showAbstract, 'blog-post--highlight': vm.highlight}"
+  ng-click="vm.viewPostDetails(vm.blogPost.id)"
+>
+  <h2 class="blog-post__title">{{vm.blogPost.title}}</h2>
+  <sub class="blog-post__created-date"
+    >Written on {{vm.blogPost.timestamp | arDateFormat}}</sub
+  >
+  <hr />
+  <p ng-if="!vm.showAbstract" class="blog-post__body">{{vm.blogPost.text}}</p>
+  <p ng-if="vm.showAbstract" class="blog-post__body">
+    {{vm.blogPost.text | limitTo:200}}<span
+      ng-show="vm.blogPost.text.length >= 200"
+      >...</span
+    >
+    <span class="fw-bold">See more</span>
+  </p>
+</article>

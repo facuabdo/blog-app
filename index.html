@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="salesforce">
+  <head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- inject:js -->
+    <script src="/src/app.js"></script>
+    <script src="/src/app.routes.js"></script>
+    <script src="/src/app/home/home.component.js"></script>
+    <script src="/src/app/blog-post/admin/blog-post-admin.component.js"></script>
+    <script src="/src/app/blog-post/create-update/blog-create-update.component.js"></script>
+    <script src="/src/app/blog-post/item/blog-post-item.component.js"></script>
+    <script src="/src/app/blog-post/display/blog-post-display.component.js"></script>
+    <script src="/src/app/shared/constants/blog.constants.js"></script>
+    <script src="/src/app/shared/filters/arDateFormat.filter.js"></script>
+    <script src="/src/app/shared/services/blog-api.service.js"></script>
+    <script src="/src/app/shared/components/main-nav/main.nav.component.js"></script>
+    <!-- endinject -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/src/styles/app.css">
+    <!-- endinject -->
+  </head>
+  <body>
+    <!-- Navigation -->
+    <main-nav></main-nav>
+
+    <!-- Main view -->
+    <div ui-view class="m-3"></div>
+  </body>
+</html>

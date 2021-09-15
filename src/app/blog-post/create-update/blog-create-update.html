@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form
+        name="vm.blogPostForm"
+        ng-submit="vm.createOrUpdatePost(vm.blogPost)"
+      >
+        <h2>{{ vm.createMode ? "Create new blog post" : "Edit blog post" }}</h2>
+
+        <div class="form-group mt-2">
+          <label for="postTitleFormField">Post Title</label>
+          <input
+            id="postTitleFormField"
+            type="text"
+            class="form-control"
+            placeholder="Blog Post Title"
+            ng-model="vm.blogPost.title"
+            required
+          />
+        </div>
+        <div class="form-group mt-2">
+          <label for="postContentFormField">Post Body</label>
+          <textarea
+            class="form-control"
+            id="postContentFormField"
+            rows="15"
+            ng-model="vm.blogPost.text"
+            required
+          ></textarea>
+        </div>
+        <p ng-if="!vm.createMode">
+          Written on {{ vm.blogPost.timestamp | arDateFormat }}
+        </p>
+        <div class="form-group mt-2 text-end">
+          <button type="submit" class="btn btn-lg mr-1 btn-primary">
+            Save
+          </button>
+          <button
+            type="button"
+            ng-click="vm.cancel()"
+            class="btn btn-lg btn-light"
+            ng-disabled="vm.blogPostForm.$invalid"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

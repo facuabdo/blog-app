@@ -1,0 +1,56 @@
+<section class="blog-post-admin">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-6">
+            <button
+              class="btn btn-success mt-3 mb-3 text-start"
+              ng-click="vm.newPost()"
+            >
+              Create new blog post
+            </button>
+          </div>
+          <div class="col-6">
+            <button
+              class="btn btn-danger mt-3 mb-3 text-end"
+              ng-click="vm.deleteAllPosts()"
+            >
+              Delete all posts
+            </button>
+          </div>
+        </div>
+        <table class="blog-post-admin__table">
+          <thead>
+            <th>Post ID</th>
+            <th>Title</th>
+            <th>Actions</th>
+          </thead>
+          <tbody>
+            <tr ng-if="vm.blogPosts.length === 0">
+              <td colspan="3">There are no posts to display.</td>
+            </tr>
+            <tr
+              ng-if="vm.blogPosts.length >= 0"
+              ng-repeat="post in vm.blogPosts"
+            >
+              <td>{{post.id}}</td>
+              <td>{{post.title}}</td>
+              <td>
+                <button
+                  class="btn btn-primary mr-3"
+                  ng-click="vm.editPost(post)"
+                >
+                  Edit
+                </button>
+                <button class="btn btn-danger" ng-click="vm.deletePost(post)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

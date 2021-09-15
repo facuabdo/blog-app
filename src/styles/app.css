@@ -1,0 +1,36 @@
+.home ul {
+  margin: 0 0 20px 0;
+}
+
+.blog-post-admin__table td,
+.blog-post-admin__table th {
+  padding: 0.5rem;
+  border: 1px solid #eee;
+}
+
+.blog-post--abstract {
+  cursor: pointer;
+}
+.blog-post--highlight .blog-post__title {
+  font-size: 3em;
+}
+.blog-post--highlight .blog-post__body {
+  font-size: 1.2em;
+}
+.blog-post__body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.main-nav {
+  background-color: #ffacac;
+  padding: 20px;
+  width: 100%;
+}
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav .logo {
+  margin-bottom: 5px;
+}
