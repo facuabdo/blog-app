@@ -49,6 +49,7 @@ It renders a view from where posts can be created, edited and deleted
         if (deleteAll) {
           BlogRestApi.deleteAll().then(() => {
             alert("All posts have been deleted");
+            loadPosts();
           });
         }
       } else {
