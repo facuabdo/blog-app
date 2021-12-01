@@ -1,8 +1,8 @@
-Challenge Malana 3
+Salesforce technical challenge - Malana 3
 
-Built with AngularJS 1.8.2, UI-Router, Bootstrap. I chose to build it using AngularJS instead of Angular2+ because I am way more familiar with this version and I believe it will tell more about my capabilities than a poor, modern-framework-based app.
+Built with AngularJS 1.8.2, UI-Router, Bootstrap.
 
-NodeJS is required to run this project. It was tested with the latest LTS version (14.17.6)
+NodeJS is required to run this project.
 
 The following commands need to be executed:
 
